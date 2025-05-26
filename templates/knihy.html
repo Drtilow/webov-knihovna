@@ -1,0 +1,18 @@
+{% extends 'zaklad.html' %}
+
+{% block obsah %}
+    <h1>Seznam knih</h1>
+    <ul>
+        {% for kniha in knihy %}
+            <li>
+                <strong>{{ kniha.nazev }}</strong> od {{ kniha.autor }}
+                —
+                {% if kniha.dostupna %}
+                    <span style="color: green;">Dostupná</span>
+                {% else %}
+                    <span style="color: red;">Vypůjčená</span>
+                {% endif %}
+            </li>
+        {% endfor %}
+    </ul>
+{% endblock %}

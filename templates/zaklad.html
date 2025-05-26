@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="cs">
+<head>
+    <meta charset="UTF-8">
+    <title>Webová knihovna</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styl.css') }}">
+</head>
+<body>
+    {% include '_navigace.html' %}
+
+    <div class="obsah">
+        {% block obsah %}{% endblock %}
+    </div>
+</body>
+</html>
